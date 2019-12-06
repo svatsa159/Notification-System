@@ -1,0 +1,69 @@
+body {
+    background-image:url(Bg.png);
+  }
+
+
+#notif{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width:20vh;
+  height:auto;
+  
+  text-align: center;
+}
+.close{
+  position: relative;
+  right:0px;
+}
+
+.not{
+  position: relative;
+  width: 100%;
+  left: 0%;
+  height:3vh;
+  margin-bottom:2vh;
+  background-color: rgb(119, 220, 245);
+}
+
+#btn{
+  position: absolute;
+  left: 28vw;
+  top: 32.5vh;
+}
+
+
+.left{
+  position: absolute;
+  height: 76vh;
+  top: 12vh;
+  right:0vw;
+  width:0vw;
+  background-color: bisque;
+  /* transition: width 1s; */
+}
+
+.left-anim{
+  animation: left 1s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes left{
+  0%{
+    width:0vw;
+  }
+  100%{
+    width:7vw;
+  }
+}
+.right-anim{
+  animation: right 1s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes right{
+  0%{
+    width:7vw;
+  }
+  100%{
+    width:0vw;
+  }
+}
