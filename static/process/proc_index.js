@@ -33,7 +33,7 @@ const check = () => {
   }
   main(); //we will not call main in the beginning.
   // importScripts('localforage.min.js');
-  const socket = io("http://192.168.2.158:8080/");
+  const socket = io("http://35.223.92.57:8080/");
   socket.on("message",function(data){
     // document.getElementById("logs").innerHTML+=data+"<br/>";
     // console.log(data);
@@ -92,7 +92,7 @@ const check = () => {
         
         $.ajax({
 
-          url : 'http://192.168.2.158:4000/notify/',
+          url : 'http://35.223.92.57:4000/notify/',
           type : 'POST',
           data : data,
           success : function(data) {              
@@ -125,7 +125,7 @@ const check = () => {
         
         $.ajax({
 
-          url : 'http://192.168.2.158:4000/notify/',
+          url : 'http://35.223.92.57:4000/notify/',
           type : 'POST',
           data : data,
           success : function(data) {              

@@ -14,7 +14,7 @@ function saveAndRedirect(){
         }
         else{
             $.ajax({
-                url: 'http://192.168.2.158:8001/log_alert/',
+                url: 'http://35.223.92.57:8001/log_alert/',
                 type: 'POST',
                 data: JSON.stringify({"logged_in":user}),
                 success: function(data) {

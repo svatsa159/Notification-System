@@ -25,7 +25,7 @@ localforage.getItem('user').then(function(value) {
 });
   const saveSubscription = async subscription => {
     
-    const SERVER_URL = 'http://192.168.2.158:8080/save-subscription'
+    const SERVER_URL = 'http://35.223.92.57:8080/save-subscription'
     const response = await fetch(SERVER_URL, {
       method: 'post',
       headers: {

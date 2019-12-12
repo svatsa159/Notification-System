@@ -13,7 +13,7 @@ function send_push_notif(uid,stop){
         console.log(stop);
         
         var clientServerOptions = {
-            uri: 'http://192.168.2.158:8080/sw_notify',
+            uri: 'http://35.223.92.57:8080/sw_notify',
             body: JSON.stringify({"message":"Process Being stopped by user "+uid,"user":uid}),
             method: 'POST',
             headers: {
@@ -24,7 +24,7 @@ function send_push_notif(uid,stop){
     else if(stop=="false"){
         console.log(stop);
         var clientServerOptions = {
-            uri: 'http://192.168.2.158:8080/sw_notify',
+            uri: 'http://35.223.92.57:8080/sw_notify',
             body: JSON.stringify({"message":"Process Being started by user "+uid,"user":uid}),
             method: 'POST',
             headers: {
@@ -41,7 +41,7 @@ function send_push_notif(uid,stop){
 
 async function send_ws_notif(uid,stop){
     var clientServerOptions = {
-        uri: 'http://192.168.2.158:8080/ws_notify',
+        uri: 'http://35.223.92.57:8080/ws_notify',
         body: JSON.stringify({"user":uid,"stop":stop}),
         method: 'POST',
         headers: {
