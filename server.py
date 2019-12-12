@@ -67,6 +67,7 @@ async def process(request):
 async def saveToDatabase(uid, subscription):
     sub_p= await pickl(subscription)
     redis_client.set(uid,sub_p)
+    print(redis_client.get(uid))
 
 async def save(request):
     data = await request.json()
