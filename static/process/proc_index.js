@@ -54,6 +54,8 @@ const check = () => {
     document.getElementById("left").innerHTML='<img src="/static/process/icon.png" style="position: relative; width:60%; left:20%; top : 5%">';
    }
    else if(color["color"]=="white"){
+    document.getElementById("left").classList.add("right-anim");
+    document.getElementById("left").classList.remove("left-anim");
     $("#btn").css("background-color","white");
     $("#btn").html("Start")
     $("#btn").css("color","black")

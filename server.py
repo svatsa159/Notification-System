@@ -133,7 +133,7 @@ async def ws_notify(request):
     userid=data["user"]
     stop = data["stop"]
     if(stop=="false"):
-        await sio.emit('message',str('{"color":"'+ random.choice(["red","green"])+'"}'))
+        await sio.emit('message',str('{"color":"'+ random.choice(["green"])+'"}'))
     elif(stop=="true"):
         await sio.emit('message',str('{"color":"white"}'))
     
@@ -192,4 +192,5 @@ app.router.add_static('/static/',path="./static/")
 # We kick off our server
 if __name__ == '__main__':
     r.flushdb()
+    redis_client.flushdb()
     web.run_app(app)
