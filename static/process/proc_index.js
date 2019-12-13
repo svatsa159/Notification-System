@@ -56,6 +56,7 @@ const check = () => {
    else if(color["color"]=="white"){
     document.getElementById("left").classList.add("right-anim");
     document.getElementById("left").classList.remove("left-anim");
+    document.getElementById("left").innerHTML="";
     $("#btn").css("background-color","white");
     $("#btn").html("Start")
     $("#btn").css("color","black")
@@ -113,9 +114,9 @@ const check = () => {
       $("#btn").html("Stopping");
     $("#btn").css("background-color","white");
     $("#btn").css("color","black");
-    document.getElementById("left").innerHTML="";
-    document.getElementById("left").classList.add("right-anim");
-    document.getElementById("left").classList.remove("left-anim");
+    // document.getElementById("left").innerHTML="";
+    // document.getElementById("left").classList.add("right-anim");
+    // document.getElementById("left").classList.remove("left-anim");
       var user;
     // var user = document.getElementsByName("u")[0].value
     localforage.getItem('user').then(function (value) {
